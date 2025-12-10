@@ -1,0 +1,30 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+       # Paso 1: Checkout del código del repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Paso 2: Configurar GCC para compilar C
+      - name: Set up GCC
+        run: sudo apt-get install build-essential -y  # Instala los compiladores y herramientas necesarias
+
+      # Paso 3: Compilar el código C
+      - name: Compile C code
+        run: |
+          gcc -o mi_programa starter.c  # Compila tu archivo C (reemplaza 'tu_codigo.c' con el nombre de tu archivo)
+        
+      # Paso 4: Ejecutar el programa compilado (opcional)
+      - name: Run the compiled program
+        run: ./starter.c
