@@ -16,15 +16,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Paso 2: Configurar GCC para compilar C
       - name: Set up GCC
-        run: sudo apt-get install build-essential -y  # Instala los compiladores y herramientas necesarias
+        run: sudo apt-get install build-essential -y
 
-      # Paso 3: Compilar el código C
       - name: Compile C code
-        run: |
-          gcc -o mi_programa challenge07/starter.c  # Compila tu archivo C (reemplaza 'tu_codigo.c' con el nombre de tu archivo)
+        run: gcc -o mi_programa challenge07/starter.c
         
-      # Paso 4: Ejecutar el programa compilado (opcional)
       - name: Run the compiled program
-        run: ./starter.c
+        run: ./mi_programa
