@@ -23,7 +23,7 @@ jobs:
       # Paso 3: Compilar el código C
       - name: Compile C code
         run: |
-          gcc -o mi_programa starter.c  # Compila tu archivo C (reemplaza 'tu_codigo.c' con el nombre de tu archivo)
+          gcc -o mi_programa challenge07/starter.c  # Compila tu archivo C (reemplaza 'tu_codigo.c' con el nombre de tu archivo)
         
       # Paso 4: Ejecutar el programa compilado (opcional)
       - name: Run the compiled program
