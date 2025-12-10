@@ -7,7 +7,7 @@ int suma(int a, int b){
 }
 
 int test_suma(){
-    assert(sum(2,3) == 5);
+    assert(sum(2,4) == 5);
 }
 
 int main() {
