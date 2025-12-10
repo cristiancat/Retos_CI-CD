@@ -3,11 +3,11 @@
 
 int suma(int a, int b);
 int suma(int a, int b){
-    return a + b;
+    return a - b;
 }
 
 int test_suma(){
-    assert(sum(2,4) == 5);
+    assert(suma(2,4) == 5);
 }
 
 int main() {
